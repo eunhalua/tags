@@ -22,6 +22,8 @@ Picture a firefighting team arriving at a fiery scene with a building on fire. N
 
 The exploiting client would inject their exploits and destroy the entire map (cause fire and burn the buildings) but this would only happen for them as the server (firefighting team) would filter the replication and not let the changes propagate to the game server. In turn, only the exploiting client would see the map get destroyed and every other client would be playing the game normally not aware that there was an exploiter in the server. FilteringEnabled saves the day!
 
+#### Note
 
+This property/feature still doesn't ensure the safety of your game. Exploiters would still have full control of their client, letting them intercept and spam remote calls, destroy local anti-exploits, sneakily insert backdoors and viruses into your game, and generally ruin the integrity and fun of your game. It is still best to implement some form of anti-exploit like sanity checks to greatly reduce the impact of exploiters to your game especially if they can ruin the game even from just running client-sided exploits.
 
 
