@@ -6,6 +6,12 @@ Filtering Enabled is a feature that prevents changes made on the client side to 
 
 Filtering Enabled works by separating the server and the client environment. Before FilteringEnabled, changes made on the client would propagate to the server allowing players to create their own scripts, instances, ruin the game for other players and more. With the environments separated, replication filtering became thing. It blocked client-sided changes from replicating to the server ultimately limiting the control of clients over the game. Exploiters will still be able to make changes on anything but that change will only appear on their end. For example, an exploiter deletes a part in the workspace on their client, it would only disappear for them but not for everyone else.
 
+#### Coding Practices Brought By FilteringEnabled
+
+Since FilteringEnabled prevented the client from directly making changes to the server, this obviously destroyed and ruined a bunch of games that didn't respect FilteringEnabled. Clients obviously needed a way to communicate with the server to perform important actions like making changes to their own data, interacting with the environment, and pretty much any non-local action. This is where RemoteEvents and RemoteFunctions come in. Instead of directly changing data from the client, players would fire remotes that signaled the server to do a specific action. This ensured the security and safety of player data.
+
+Code Sample: https://github.com/eunhalua/tags/blob/main/Remote%20Events.md
+
 #### Exceptions
 
 While FilteringEnabled essentially stops user-imposed client-server replication, there are still exceptions to this rule. Such things would be assemblies and baseparts that are network-owned by the client. This same exception is the very reason why movement exploits such as teleportation, speed, and jump exist. Unanchored parts may also be a part of this exception because network ownership will automatically be set to certain clients.
