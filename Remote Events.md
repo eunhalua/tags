@@ -1,6 +1,6 @@
 Basic usage of RemoteEvents.
 
-### It is important to note that RemoteEvents fired from the client to the server will ALWAYS automatically pass the Player who fired. This eliminates the need to put Player as the first argument in RemoteEvent:FireServer()
+##### It is important to note that RemoteEvents fired from the client to the server will ALWAYS automatically pass the Player who fired. This eliminates the need to put Player as the first argument in RemoteEvent:FireServer()
 
 ```lua
 -- LocalScript (Client) --
