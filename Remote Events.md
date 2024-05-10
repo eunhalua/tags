@@ -15,6 +15,7 @@ local Mouse = Player:GetMouse()
 
 -- Connection setup that fires when the player clicks
 Mouse.Button1Down:Connect(function()
+  -- Let the server know that the player clicked
   Remote:FireServer()
 end)
 
@@ -29,6 +30,7 @@ Remote.OnServerEvent:Connect(function(Player)
   local leaderstats = Player.leaderstats
   local clicks = leaderstats.Clicks
 
+  -- Add to the clicks value of the Player
   clicks.Value += 1
 end)
 ```
