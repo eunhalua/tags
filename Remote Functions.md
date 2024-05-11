@@ -1,4 +1,4 @@
-A simple RemoteFunction implementation for displaying the player's ping on the client side.
+# Remote Functions
 
 Like RemoteEvents, a RemoteFunction call initiated by the client to the server will ALWAYS pass the player. This eliminates the need of putting Player as the first argument in `RemoteFunction:InvokeServer()`. A RemoteFunction will yield the execution of code until it receives a response from the receiving end meaning you should not use RemoteFunctions if you are not going to return any significant data or any data at all.
 
@@ -10,6 +10,9 @@ Like RemoteEvents, a RemoteFunction call initiated by the client to the server w
 If the client errors, the server will also error.
 If the client does not return a value, the server will yield indefinitely.
 If the client leaves or gets disconnected from the game upon invocation, InvokeClient() will error.
+
+##### IMPLEMENTATION:
+A simple RemoteFunction implementation for displaying the player's ping on the client side.
 
 ```lua
 -- LocalScript (Client) --
