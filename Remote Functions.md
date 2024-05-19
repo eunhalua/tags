@@ -1,6 +1,6 @@
 # Remote Functions
 
-Like RemoteEvents, a RemoteFunction call initiated by the client to the server will ALWAYS pass the player. This eliminates the need of putting Player as the first argument in `RemoteFunction:InvokeServer()`. A RemoteFunction will yield the execution of code until it receives a response from the receiving end meaning you should not use RemoteFunctions if you are not going to return any significant data or any data at all. There is almost no instance where you will have to use RemoteFunctions apart from it being a better alternative.
+Like RemoteEvents, a RemoteFunction call initiated by the client to the server will ALWAYS pass the player. This eliminates the need of putting Player as the first argument in `RemoteFunction:InvokeServer()`. A RemoteFunction will wait until the function finishes or returns something.
 
 ##### NOTE:
 `RemoteFunction:InvokeClient()` is not usually used in practice because there will almost always be no instance that a client has information that the server does not have. If invoking the client is really needed, certain risks should be taken.
