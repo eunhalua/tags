@@ -1,6 +1,6 @@
 # Filtering Enabled
 
-Filtering Enabled is a feature that prevents changes made on the client side to replicate to the server side. This was previously an optional feature put in place by Roblox to combat exploiters but is now forced onto all experiences and cannot be toggled following Roblox's strict imposement of anti-exploits. The property was also deprecated as developers are not able to toggle it anymore.
+Filtering Enabled is a feature that prevents changes made on the client side to replicate to the server side. This used to be an optional feature put in place by Roblox to prevent exploiters but is now forcefully enabled and cannot be disabled. The property was also deprecated as developers are not able to toggle it anymore.
 
 #### How Does It Work?
 
